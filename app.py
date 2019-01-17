@@ -9,7 +9,7 @@ Bootstrap(app)
 def home():
 	return render_template('index.html')
 
-@app.route('/bio.html')
+@app.route('/bio')
 def bio():
 	return render_template('bio.html')
 
