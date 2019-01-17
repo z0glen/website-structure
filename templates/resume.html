@@ -1,0 +1,201 @@
+{% extends 'base.html' %}
+{% block head %}
+<head>
+	<style>
+		.timeline {
+			color: #fff;
+			font: normal 16px/1.5 "Helvetica Neue", sans-serif;
+		}
+		.title {
+			color: #000;
+			text-align: center;
+			font-family: "Lucida Console", Monaco, monospace;
+		}
+		*,
+		*::before,
+		*::after {
+		  margin: 0;
+		  padding: 0;
+		  box-sizing: border-box;
+		}
+		.timeline ul {
+		  /*background: #456990;*/
+		  padding: 50px 0;
+		}
+
+		.timeline ul li {
+		  list-style-type: none;
+		  position: relative;
+		  width: 6px;
+		  margin: 0 auto;
+		  padding-top: 50px;
+		  background: #337ab7;
+		}
+
+		.timeline ul li::after {
+		  content: '';
+		  position: absolute;
+		  left: 50%;
+		  bottom: 0;
+		  transform: translateX(-50%);
+		  width: 30px;
+		  height: 30px;
+		  border-radius: 50%;
+		  background: inherit;
+		}
+
+		.timeline ul li div {
+		  position: relative;
+		  bottom: 0;
+		  width: 400px;
+		  padding: 15px;
+		  background: #337ab7;
+			border-color: #f5f5f5;
+		}
+
+		.timeline ul li div::before {
+		  content: '';
+		  position: absolute;
+		  bottom: 7px;
+		  width: 0;
+		  height: 0;
+		  border-style: solid;
+		}
+
+		.timeline ul li:nth-child(odd) div {
+		  left: 45px;
+		}
+
+		.timeline ul li:nth-child(odd) div::before {
+		  left: -15px;
+		  border-width: 8px 16px 8px 0;
+		  border-color: transparent #337ab7 transparent transparent;
+		}
+
+		.timeline ul li:nth-child(even) div {
+		  left: -439px;
+		}
+
+		.timeline ul li:nth-child(even) div::before {
+		  right: -15px;
+		  border-width: 8px 0 8px 16px;
+		  border-color: transparent transparent transparent #337ab7;
+		}
+
+		date {
+		  display: block;
+		  font-size: 1.2rem;
+		  font-weight: bold;
+		  margin-bottom: 8px;
+		}
+		
+		
+		@media screen and (max-width: 900px) {
+		  .timeline ul li div {
+			width: 250px;
+		  }
+		  .timeline ul li:nth-child(even) div {
+			left: -289px;
+			/*250+45-6*/
+		  }
+		}
+
+		@media screen and (max-width: 600px) {
+		  .timeline ul li {
+			margin-left: 20px;
+		  }
+		  .timeline ul li div {
+			width: calc(100vw - 91px);
+		  }
+		  .timeline ul li:nth-child(even) div {
+			left: 45px;
+		  }
+		  .timeline ul li:nth-child(even) div::before {
+			left: -15px;
+			border-width: 8px 16px 8px 0;
+			border-color: transparent #337ab7 transparent transparent;
+		  }
+		}
+
+	.skills-blk {
+		padding:20px;
+	}
+	</style>
+</head>
+{% endblock %}
+{% block content %}
+<body>
+	<section class="timeline">
+		<h1 class="title">Timeline</h1>
+		<ul>
+			<li>
+				<div class="entry exp">
+					<h1>Experience <i class="fa fa-flask"></i></h1>
+				</div>
+			</li>
+			<li>
+				<div class="entry exp">
+					<h3>Research Assistant</h3>
+					<span class="date">2016</span>
+					<h4>Interdisciplinary Affective Sciences Laboratory</h4>
+				</div>
+			</li>
+			<li>
+				<div class="entry exp">
+					<h1>Education</h1>
+					<h3>Northeastern University</h3>
+					<p>Major: Bioengineering</p>
+					<p>Minor: Computer Science</p>
+				</div>
+			</li>
+			<li>
+				<div class="entry exp">
+					<h3>Beverly High School</h3>
+					<p>Graduation: 2015</p>
+				</div>
+			</li>
+		</ul>
+	</section>
+	<div class="skills-blk">
+		<h1 class="title">Skills</h1>
+		<div class="row">
+			<div class="col-sm-2">
+				HTML/CSS
+				<div class="progress">
+					<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%"></div>
+				</div>
+			</div>
+			<div class="col-sm-2">
+				Javascript
+				<div class="progress">
+					<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%"></div>
+				</div>
+			</div>
+			<div class="col-sm-2">
+				Python
+				<div class="progress">
+					<div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%"></div>
+				</div>
+			</div>
+			<div class="col-sm-2">
+				Java
+				<div class="progress">
+					<div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%"></div>
+				</div>
+			</div>
+			<div class="col-sm-2">
+				MATLAB
+				<div class="progress">
+					<div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%"></div>
+				</div>
+			</div>
+			<div class="col-sm-2">
+				Arduino/C
+				<div class="progress">
+					<div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+{% endblock %}

@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+<head>
+{% block head %}
+	<style>
+		.jumbotron img {
+			display: block;
+			max-width: 100%;
+			-ms-interpolation-mode: bicubic;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+		.jumbotron h2, .jumbotron p, .jumbotron h4 {
+			text-align: center;
+			left: 0;
+			right: 0;
+			color: white;
+			vertical-align: middle;
+		}
+		.jumbotron h2 span, .jumbotron p span, .jumbotron h4 span {
+			letter-spacing: -1px;
+			background: rgb(0,0,0);
+			background: rgba(0,0,0,0.7);
+			padding: 10px;
+		}
+		.jumbotron p span {
+			font: bold 10px/20px Helvetica, Sans-Serif;
+			padding: 2px;
+		}
+		.jumbotron {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-image: url('static/images/Cabot_yard_and_Boston_Skyline.jpg');
+			background-size: cover;
+			color: #ffffff;
+			height: 550px;
+			width: 100%;
+			background-position: 50% 50%;
+			justify-content: center;
+			margin: 0;
+		}
+		.jumbotron h2 {
+			font-size: 60px;
+			font-weight: 700;
+			margin: 0;
+			padding: 10px;
+			color: #fff;
+		}
+		.jumbotron h4 {
+			font-size: 20px;
+			font-weight: 400;
+			margin: 0;
+			padding: 10px;
+			color: #fff;
+		}
+		.jumbotron p {
+			position: absolute;
+			top: 610px;
+			right: 0;
+			color: #fff;
+			text-align: right;
+			padding-right: 30px;
+		}
+		.btn.btn-default {
+			display: inline-block;
+			cursor: pointer;
+			border: 3px solid #000;
+			border-radius: 0;
+			color: #000;
+			font-weight: 500;
+			background: rgba(255,255,255,0.5);
+		}
+		.btn.btn-default:hover {
+			color: #ffffff;
+			background-color: #000;
+		}
+		.wrapper {
+			text-align: center;
+			vertical-align: bottom;
+			padding-top: 10px;
+		}
+		.social {
+			padding: 0;
+			display: inline-block;
+		}
+		.social img {
+			width: 16px;
+			height: 16px;
+		}
+		@media screen and (max-width: 540px) {
+			.jumbotron h4 {
+				font-size: 16px;
+			}
+		}
+		@media screen and (max-width: 460px) {
+			.jumbotron h2 {
+				font-size: 50px;
+			}
+			.jumbotron h4 {
+				font-size: 14px;
+			}
+		}
+		@media screen and (max-width: 400px) {
+			.jumbotron h2 {
+				line-height: 150%;
+			}
+			.jumbotron h4 {
+				font-size: 20px;
+				line-height: 210%;
+			}
+		}
+	</style>
+{% endblock %}
+</head>
+<body>
+{% block content %}
+	<section class="jumbotron">
+		<div class="container-fluid">
+			<div class="row">
+				<h2><span>Zach Bauer</span></h2>
+				<h4><span>Bioengineer, Developer, Bostonian</span></h4>
+				<div class="wrapper">
+					<a class="btn btn-default" href="static/documents/bauer_resume.pdf" download="bauer_resume.pdf" role="button">Download Resume</a>
+					<a class="btn btn-default" href="mailto:zgbauer@gmail.com" role="button">Contact Me</a>
+				</div>
+				<div class="wrapper">
+					<a class="social" href="https://linkedin.com/in/zachary-bauer-533414116"><img src="static/images/linkedin-inv.png"></a>
+					<a class="social" href="https://devpost.com/zbauer"><img src="static/images/devpost-inv.png"></a>
+				</div>
+			</div>
+			<p><span>Photo by Peter Rood, Wikimedia Commons</span></p>
+		</div>
+	</section>
+{% endblock %}
+</body>
